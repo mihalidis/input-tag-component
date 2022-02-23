@@ -7,7 +7,7 @@
            :index="index"
            :tag-theme="color"
             @removeTag="removeTag"/>
-      <input class="tag-input" :class="color" type="text" @keypress.enter="handleEnter">
+      <input placeholder="Add tag..." class="tag-input" :class="color" type="text" @keypress.enter="handleEnter">
     </div>
     <span v-if="showMessage" class="error-message">{{ errorMessage }}</span>
   </div>
@@ -71,6 +71,27 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+.pink {
+  background-color: #FFE4C0;
+  color: #495371;
+}
+
+.pink .tag-close {
+  background-color: #FFBBBB;
+  color: #fff;
+}
+
+.blue {
+  background-color: #94DAFF;
+  color: #495371;
+}
+
+.blue .tag-close {
+  background-color: #99FEFF;
+  color: #fff;
+}
 .tag-container {
   border: 1px solid #ccc;
   padding: 10px 15px;

@@ -1,8 +1,8 @@
 {
-  "name": "tag-component",
+  "name": "v-tag-component",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "gkandemir",
+  "author": "pinarsuvac",
   "license": "MIT",
   "private": true,
   "scripts": {

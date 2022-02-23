@@ -1,5 +1,5 @@
 <template>
-  <Tags v-model="tags" color="pink"/>
+  <Tags v-model="tags" :color="theme"/>
 </template>
 
 <script>
@@ -11,19 +11,11 @@ export default {
   },
   data() {
     return {
-      tags: "tag1,tag2,tag3,tag4"
+      tags: "tag1,tag2,tag3,tag4",
+      theme: 'pink'
     }
   }
 }
 </script>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-@import './assets/theme.css';
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-</style>
 
 

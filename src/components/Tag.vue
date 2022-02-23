@@ -40,8 +40,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .tag {
+  font-family: 'Roboto', sans-serif;
   position: relative;
   border-radius: 4px;
   cursor: default;
