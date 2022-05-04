@@ -1,5 +1,5 @@
 <template>
-  <Tags v-model="tags" :color="theme"/>
+  <Tags v-model="tags" background-color="ff6161" text-color="fff"/>
 </template>
 
 <script>
@@ -12,7 +12,6 @@ export default {
   data() {
     return {
       tags: "tag1,tag2,tag3,tag4",
-      theme: 'pink'
     }
   }
 }
