@@ -1,5 +1,5 @@
 <template>
-  <span class="tag" :class="selectedTheme">
+  <span class="tag" :style="{'color':`#${textColor}`, 'background': `#${backgroundColor}`}">
     <span class="tag-content">{{ tag }}</span>
     <span class="tag-close" @click.prevent="removeTag(index)"></span>
   </span>
@@ -17,19 +17,11 @@ export default {
       type: [Number, String],
       default: 0
     },
-    tagTheme: {
+    textColor: {
       type: String,
-      required: false
-    }
-  },
-  data() {
-    return {
-      selectedTheme: "pink"
-    }
-  },
-  created() {
-    if(this.tagTheme) {
-      this.selectedTheme = this.tagTheme;
+    },
+    backgroundColor: {
+      type: String,
     }
   },
   methods: {
@@ -54,19 +46,18 @@ export default {
 
 .tag .tag-close {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px;
   border-radius: 10px;
-  top: -5px;
-  right: -4px;
+  top: -2px;
+  right: 2px;
   width: 8px;
   height: 8px;
   cursor: pointer;
 }
-
 .tag .tag-close:after {
   content: '\d7';
+}
+
+.tag-content {
+  padding: 0 5px 0 0;
 }
 </style>
